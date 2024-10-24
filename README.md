@@ -6,7 +6,7 @@ Complete Python Course for Data Science, Machine Learning
 
 Using Linux:
 ```bash
-  cpip install virtualenv
+  pip install virtualenv
   virtualenv -p python3 myenv
   myenv\Scripts\activate
 ```
@@ -17,6 +17,7 @@ Using Python:
   python -m venv myenv
   myenv\Scripts\activate
 ```
+Note: myenv python version will be current installed python version in the system
 
 Using Conda:
 ```bash
