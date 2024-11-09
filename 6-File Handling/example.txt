@@ -4,4 +4,11 @@ Welcome to the course
 Lets become threat to AI
 Hello
 World
-By Humans
+By HumansAppended new line
+This is a new lineFirst Line
+Second Line
+Third Line
+Fourth Line
+Fifth Line
+Sixth Line
+Seventh Line
