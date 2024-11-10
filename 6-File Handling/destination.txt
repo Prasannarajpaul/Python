@@ -1,0 +1,14 @@
+Hi Guys this is Prasanna Maddala preparing for Data Science and Data Analysis
+This Python course covers basics that are required for DS, DA and ML
+Welcome to the course
+Lets become threat to AI
+Hello
+World
+By HumansAppended new line
+This is a new lineFirst Line
+Second Line
+Third Line
+Fourth Line
+Fifth Line
+Sixth Line
+Seventh Line
