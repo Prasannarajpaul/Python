@@ -1,6 +1,5 @@
-
 # Python
-Complete Python Course for Data Science, Machine Learning
+Complete Python Course for Data Science, Machine Learning, Data Analysis and Artificial Intelligence
 
 ## Python Environment
 
