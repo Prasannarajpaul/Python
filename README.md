@@ -22,7 +22,15 @@ Using Conda:
 ```bash
   conda create -p myenv python==3.10
   conda activate myenv
-```  
+```
+
+Note: Use Path to env if direct env activation doesn't work
+(To know the path of all Existing envs use below list env)
+List env:
+```bash
+  conda env list
+```
+
 
 ## Course Contents:
 ## Python
