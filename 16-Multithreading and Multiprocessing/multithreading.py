@@ -8,11 +8,32 @@ import time
 
 def print_numbers():
     for i in range(5):
+        time.sleep(2)# made sleep as it will has I/O operation
         print(f"Number: {i}")
 
 def print_letter():
     for letter in "abcde":
+        time.sleep(2)
         print(f"Letter: {letter}")
 
-print_numbers()
-print_letter()
+# t=time.time()
+# print_numbers()
+# print_letter()
+# finished_time = time.time()-t
+# print(finished_time) #20 seconds
+
+# Creating 2 threads
+t1 = threading.Thread(target=print_numbers)
+t2 = threading.Thread(target=print_letter)
+
+t = time.time()
+# start the thread
+t1.start()
+t2.start()
+
+## Wait for the threads to complete
+t1.join()
+t2.join() # need to make into one thread so that remaining code to work
+
+finished_time = time.time() - t
+print(finished_time) #10 seconds
