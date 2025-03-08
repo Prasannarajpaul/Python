@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template # to redirect to the html
 '''
 It creates an instance of the Flask class,
 which will be your WSGI (Web Server Gateway Interface) application.
@@ -9,6 +9,14 @@ app = Flask(__name__)
 @app.route("/")
 def welcome():
     return "<html><H1>Welcome to the flask course</H1></html>"
+
 @app.route("/index")
 def index():
-    return "Welcome to the index page"
+    return render_template('index.html') # go inside 'templates' and search
+
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+if __name__=="__main__":
+    app.run(debug=True)
