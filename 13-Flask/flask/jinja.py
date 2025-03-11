@@ -63,7 +63,7 @@ def sucessres(score):
 
 # If Condition
 @app.route('/successif/<int:score>') # <Default Parameter will be string> -> Variable Rule
-def sucess(score):
+def sucessif(score):
     return render_template('result2.html', results=score)
 
 if __name__=="__main__":
