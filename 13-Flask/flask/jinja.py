@@ -9,7 +9,7 @@
 {#...#} - comments
 '''
 
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
 '''
 It creates an instance of the Flask class,
 which will be your WSGI (Web Server Gateway Interface) application.
@@ -50,7 +50,7 @@ def sucess(score):
     # return "The marks you got is "+ str(score)
     
 @app.route('/successres/<int:score>') # <Default Parameter will be string> -> Variable Rule
-def sucessres(score):
+def successres(score):
     res=""
     if score>50:
         res="PASSED"
@@ -65,6 +65,27 @@ def sucessres(score):
 @app.route('/successif/<int:score>') # <Default Parameter will be string> -> Variable Rule
 def sucessif(score):
     return render_template('result2.html', results=score)
+
+
+@app.route('/fail/<int:score>') # <Default Parameter will be string> -> Variable Rule
+def fail(score):
+    return render_template('result.html', results=score)
+
+
+@app.route('/submit1', methods=["POST", "GET"])
+def submit1():
+    total_score = 0
+    if request.method=="POST":
+        science = float(request.form['science'])
+        maths = float(request.form['maths'])
+        c = float(request.form['c'])
+        datascience = float(request.form['datascience'])
+
+        total_score = (science+maths+c+datascience)/4
+    else:
+        return render_template('getresult.html')
+    return redirect(url_for('successres', score=total_score))
+    
 
 if __name__=="__main__":
     app.run(debug=True)
