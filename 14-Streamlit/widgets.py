@@ -25,7 +25,7 @@ data = {
 }
 
 df = pd.DataFrame(data)
-df.to_csv("sampleddata.csv")
+df.to_csv("sampledata.csv")
 st.write(df)
 
 
